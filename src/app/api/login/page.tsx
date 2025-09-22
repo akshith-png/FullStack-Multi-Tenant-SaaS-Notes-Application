@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('password');
   const [error, setError] = useState('');
   const router = useRouter();
 
@@ -38,10 +38,8 @@ export default function LoginPage() {
         /><br /><br />
         <input
           type="password"
-          placeholder="Password"
           value={password}
-          onChange={e => setPassword(e.target.value)}
-          required
+          disabled
         /><br /><br />
         <button type="submit">Login</button>
       </form>
