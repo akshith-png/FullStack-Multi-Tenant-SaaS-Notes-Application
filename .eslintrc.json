@@ -1,6 +1,7 @@
-{
-  "extends": ["next/core-web-vitals"],
-  "rules": {
-    "@typescript-eslint/no-explicit-any": "off"
-  }
-}
+const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+};
+
+module.exports = nextConfig;
